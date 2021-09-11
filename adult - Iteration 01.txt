@@ -1,0 +1,98 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 50 -T 0 -C 0.95 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -Z -c 13
+Relation:     adult-weka.filters.unsupervised.attribute.Discretize-B3-M-1.0-R1-precision6-weka.filters.unsupervised.attribute.Discretize-B20-M-1.0-R3-precision6-weka.filters.unsupervised.attribute.Discretize-B16-M-1.0-R5-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B100-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B100-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R11-precision10-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R11-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R12-precision6-weka.filters.unsupervised.attribute.Discretize-B10-M-1.0-R13-precision6-weka.filters.unsupervised.attribute.Remove-R5-weka.filters.unsupervised.attribute.Remove-R7
+Instances:    32561
+Attributes:   13
+              Age
+               workclass
+               fnlwgt
+               education
+               marital-status
+               occupation
+               race
+               sex
+               capital-gain
+               capital-loss
+               hours-per-week
+               native-country
+               y
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.15 (4884 instances)
+Minimum metric <confidence>: 0.95
+Number of cycles performed: 17
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 23
+
+Size of set of large itemsets L(2): 91
+
+Size of set of large itemsets L(3): 179
+
+Size of set of large itemsets L(4): 174
+
+Size of set of large itemsets L(5): 87
+
+Size of set of large itemsets L(6): 25
+
+Size of set of large itemsets L(7): 3
+
+Best rules found:
+
+ 1. Age='(-inf-41.333333]'  marital-status= Never-married  capital-gain='(-inf-9999.9]'  hours-per-week='(30.4-40.2]' 5074 ==>  y= <=50K 4978    conf:(0.98)
+ 2. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 7250 ==>  y= <=50K 7087    conf:(0.98)
+ 3. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 6437 ==>  y= <=50K 6289    conf:(0.98)
+ 4. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]' 7447 ==>  y= <=50K 7267    conf:(0.98)
+ 5. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 6022 ==>  y= <=50K 5876    conf:(0.98)
+ 6. Age='(-inf-41.333333]'  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 9284 ==>  y= <=50K 9057    conf:(0.98)
+ 7. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  native-country= United-States 6617 ==>  y= <=50K 6455    conf:(0.98)
+ 8. Age='(-inf-41.333333]'  marital-status= Never-married  hours-per-week='(30.4-40.2]' 5104 ==>  y= <=50K 4979    conf:(0.98)
+ 9. Age='(-inf-41.333333]'  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 8311 ==>  y= <=50K 8105    conf:(0.98)
+10.  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  hours-per-week='(30.4-40.2]' 5515 ==>  y= <=50K 5377    conf:(0.97)
+11. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 5495 ==>  y= <=50K 5357    conf:(0.97)
+12. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]' 6191 ==>  y= <=50K 6030    conf:(0.97)
+13. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 7628 ==>  y= <=50K 7429    conf:(0.97)
+14. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 7014 ==>  y= <=50K 6828    conf:(0.97)
+15. Age='(-inf-41.333333]'  marital-status= Never-married  capital-gain='(-inf-9999.9]' 9549 ==>  y= <=50K 9295    conf:(0.97)
+16.  marital-status= Never-married  capital-gain='(-inf-9999.9]'  hours-per-week='(30.4-40.2]' 5679 ==>  y= <=50K 5527    conf:(0.97)
+17. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  native-country= United-States 5655 ==>  y= <=50K 5503    conf:(0.97)
+18. Age='(-inf-41.333333]'  marital-status= Never-married  capital-gain='(-inf-9999.9]'  native-country= United-States 8552 ==>  y= <=50K 8322    conf:(0.97)
+19. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]' 7847 ==>  y= <=50K 7624    conf:(0.97)
+20. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  native-country= United-States 7222 ==>  y= <=50K 7013    conf:(0.97)
+21.  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 7887 ==>  y= <=50K 7658    conf:(0.97)
+22.  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 6997 ==>  y= <=50K 6788    conf:(0.97)
+23. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-loss='(-inf-435.6]' 7313 ==>  y= <=50K 7089    conf:(0.97)
+24. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  capital-loss='(-inf-435.6]'  native-country= United-States 6494 ==>  y= <=50K 6291    conf:(0.97)
+25.  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]' 8110 ==>  y= <=50K 7856    conf:(0.97)
+26.  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 6532 ==>  y= <=50K 6326    conf:(0.97)
+27. Age='(-inf-41.333333]'  marital-status= Never-married  sex= Male  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 5169 ==>  y= <=50K 5005    conf:(0.97)
+28.  workclass= Private  marital-status= Never-married  capital-gain='(-inf-9999.9]'  native-country= United-States 7200 ==>  y= <=50K 6970    conf:(0.97)
+29. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married 7510 ==>  y= <=50K 7269    conf:(0.97)
+30. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-loss='(-inf-435.6]' 6073 ==>  y= <=50K 5878    conf:(0.97)
+31.  marital-status= Never-married  capital-loss='(-inf-435.6]'  hours-per-week='(30.4-40.2]' 5558 ==>  y= <=50K 5378    conf:(0.97)
+32. Age='(-inf-41.333333]'  marital-status= Never-married  capital-loss='(-inf-435.6]' 9365 ==>  y= <=50K 9061    conf:(0.97)
+33. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  native-country= United-States 6674 ==>  y= <=50K 6457    conf:(0.97)
+34. Age='(-inf-41.333333]'  marital-status= Never-married  capital-loss='(-inf-435.6]'  native-country= United-States 8382 ==>  y= <=50K 8109    conf:(0.97)
+35.  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 5954 ==>  y= <=50K 5760    conf:(0.97)
+36.  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 10258 ==>  y= <=50K 9919    conf:(0.97)
+37. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  capital-loss='(-inf-435.6]'  native-country= United-States 5543 ==>  y= <=50K 5359    conf:(0.97)
+38. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-loss='(-inf-435.6]' 7690 ==>  y= <=50K 7432    conf:(0.97)
+39. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White 6242 ==>  y= <=50K 6032    conf:(0.97)
+40.  marital-status= Never-married  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]'  native-country= United-States 9192 ==>  y= <=50K 8881    conf:(0.97)
+41.  marital-status= Never-married  hours-per-week='(30.4-40.2]' 5722 ==>  y= <=50K 5528    conf:(0.97)
+42.  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]' 6721 ==>  y= <=50K 6492    conf:(0.97)
+43. Age='(-inf-41.333333]'  marital-status= Never-married  race= White  capital-loss='(-inf-435.6]'  native-country= United-States 7072 ==>  y= <=50K 6831    conf:(0.97)
+44. Age='(-inf-41.333333]'  marital-status= Never-married 9630 ==>  y= <=50K 9299    conf:(0.97)
+45. Age='(-inf-41.333333]'  marital-status= Never-married  native-country= United-States 8623 ==>  y= <=50K 8326    conf:(0.97)
+46. Age='(-inf-41.333333]'  marital-status= Never-married  sex= Male  capital-gain='(-inf-9999.9]' 5322 ==>  y= <=50K 5138    conf:(0.97)
+47. Age='(-inf-41.333333]'  workclass= Private  marital-status= Never-married  race= White  native-country= United-States 5703 ==>  y= <=50K 5505    conf:(0.97)
+48.  workclass= Private  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  native-country= United-States 6133 ==>  y= <=50K 5918    conf:(0.96)
+49. Age='(-inf-41.333333]'  marital-status= Never-married  race= White 7909 ==>  y= <=50K 7627    conf:(0.96)
+50.  marital-status= Never-married  race= White  capital-gain='(-inf-9999.9]'  capital-loss='(-inf-435.6]' 8407 ==>  y= <=50K 8106    conf:(0.96)
+

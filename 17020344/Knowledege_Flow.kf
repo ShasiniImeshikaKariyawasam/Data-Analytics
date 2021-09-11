@@ -1,0 +1,49 @@
+{
+	"flow_name" : "Knowledege_Flow",
+	"steps" : [
+		{
+			"class" : "weka.knowledgeflow.steps.Associator",
+			"properties" : {
+				"associator" : {
+					"type" : "optionHandler",
+					"class" : "weka.associations.Apriori",
+					"options" : "-N 50 -T 0 -C 0.95 -D 0.05 -U 1.0 -M 0.1 -S -1.0 -A -Z -c 13"
+				},
+				"name" : "Apriori"
+			},
+			"connections" : {
+				"text" : [
+					"TextViewer"
+				]
+			},
+			"coordinates" : "280,240"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.TextViewer",
+			"properties" : {
+				"name" : "TextViewer"
+			},
+			"connections" : {
+			},
+			"coordinates" : "520,240"
+		},
+		{
+			"class" : "weka.knowledgeflow.steps.Loader",
+			"properties" : {
+				"loader" : {
+					"type" : "loader",
+					"class" : "weka.core.converters.ArffLoader",
+					"filePath" : "C:/Users/Asus/Documents/4th year/SEM O1/DA/dataSets/adult_4.arff",
+					"useRelativePath" : false
+				},
+				"name" : "ArffLoader"
+			},
+			"connections" : {
+				"dataSet" : [
+					"Apriori"
+				]
+			},
+			"coordinates" : "40,240"
+		}
+	]
+}
